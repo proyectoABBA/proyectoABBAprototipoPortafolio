@@ -1,0 +1,161 @@
+/*General*/
+
+body {
+  display: block;
+  position: relative;
+}
+
+body::after {
+  content: "";
+  background: url("../images/backgroundabba.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
+}
+
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1040;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+  }
+/*General*/
+
+/*Header*/
+  .header {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header-logo{
+    border:10px solid black;
+    background-color: transparent;
+    padding: 0.5em;
+    position: static;
+    height: 50px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.header-logo:hover{
+    font-size: 1.1em;
+}
+
+.header-logo-in{
+    font-family: 'Patua One', cursive;
+    font-size: 2em;
+    color: black;
+    text-align: center;
+}
+.header-nav-container{
+    width: 50%;
+    height: 90px;
+}
+.header-nav{
+  flex-grow: 2;
+  height: inherit;
+  padding: 0;
+ margin:0;
+
+}
+.header-nav ol{
+ display: flex;
+ flex-direction: row; 
+ justify-content: space-between;
+ height: inherit;
+ padding: 0;
+ margin:0;
+}
+
+.header-nav ol li{
+  list-style-type: none;
+  height: inherit;
+  padding:0;
+ margin:0;
+ display: flex;
+ flex-direction: column;
+}
+
+  /*Header*/
+
+  .container {
+    /* border: 1px solid red; */
+    /*max-width: 1000px;*/
+    padding: 0 1em;
+   /* max-width: 1200px;*/
+    flex: 1;
+    margin: 0 auto;
+    display: inherit;
+    justify-content: inherit;
+    align-items: inherit;
+    height: inherit;
+    flex-wrap: inherit;
+    flex-direction: inherit;
+
+  }
+  
+  .link-container{
+      display: flex;
+      flex-direction: column;
+      height: inherit;
+      justify-content: center;
+      align-items: center;
+  }
+
+.link-container a{
+    color:#212A35;
+    font-size: 1.2em;
+    height: inherit;
+    display: flex;
+  text-decoration: none;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Squada One', cursive;
+  transition: 0.4s;
+  }
+  .link-container a:hover{
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+  }
+
+  /*Social*/
+  .social{
+      display: flex;
+  }
+      
+.social-left{
+    width: 50%;
+}
+.social-link{
+    margin-bottom: 1em;
+    transition: 0.4s;
+    text-decoration: none;
+}
+.social-link:hover{
+    font-size: 1.7em;
+}
+  .social-right{
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+      height: 300px;
+  }
+  .social-icon{
+      font-size: 1.5em;
+      color:white;
+      }
