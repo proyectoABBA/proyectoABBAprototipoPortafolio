@@ -1,8 +1,13 @@
 /*General*/
 
+html, body{
+  overflow: auto;
+  
+  padding: 0;
+  margin: 0;
+}
 body {
   display: block;
-  position: relative;
 }
 
 body::after {
@@ -159,3 +164,48 @@ body::after {
       font-size: 1.5em;
       color:white;
       }
+
+      /*Hero*/
+
+      .hero{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        padding-right: 5em;
+        
+      }
+      .hero-right-line-container{
+        padding: 4em 2em 2em 2em;
+        width: 50%;
+      }
+
+      .hero-right{
+
+        background-color: white;
+
+      width: 40vw;
+      display: flex;
+      flex-direction: column;
+      
+      
+      }
+      .hero-right-title{
+        margin-top: 0.7em;
+      }
+      .hero-right-header{
+        align-items: center;
+        padding: 0em 1em 0em 1em;
+      }
+      .hero-right-header h1{
+        font-size: 4em;
+      }
+
+      .hero-right-body{
+        display: flex;
+      flex-direction: row;
+      }
+      .hero-right-line{
+        width: 10em;
+        border-top: 5px black solid;
+      }
+      /*Hero*/
