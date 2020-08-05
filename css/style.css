@@ -263,17 +263,23 @@ body::after {
         padding-right: 1em;
         margin-bottom: 2em;
       }
+      
       .portfolio h1{
+        color: #1A2B6D ;
         font-size: 1.5em;
         background-color: inherit;
-        color: #1A2B6D;
+        transition: 1s;
       }
       .portfolio h2{
         color: black;
         font-size: 1em;
         font-weight: unset;
+        transition: 1s;
       }
       .portfolios .container{
         padding: 0;
+      }
+      .hDisable .portfolio h1, .hDisable .portfolio h2{
+        color: #F2F2F2;
       }
       /*Portfolios*/

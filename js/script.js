@@ -1,17 +1,14 @@
-function inViewport( element ){
+function inViewport( element ,percent){
 
   
     // Get the elements position relative to the viewport
   
     var bb = element.getBoundingClientRect();
-    console.log('Top',bb.top)
-    console.log('Bottom',bb.bottom)
-    console.log('innerHeight',innerHeight)
     
     // Check if the element is outside the viewport
     // Then invert the returned value because you want to know the opposite
   
-    return !(bb.top > innerHeight*0.7 || bb.bottom < 0);
+    return !(bb.top > innerHeight*percent || bb.bottom < 0);
     
   }
  
@@ -19,6 +16,8 @@ function inViewport( element ){
   ()=>{
   var myElement = document.querySelector( '.hero' );
   var myElement2 = document.querySelector( '.hero-right' );
+  var portfolioContainer = document.querySelector( '.portfolio-container' );
+
   
   // Listen for the scroll event
   
@@ -26,7 +25,7 @@ function inViewport( element ){
    
     // Check the viewport status
   
-    if( inViewport( myElement ) ){
+    if( inViewport( myElement ,0.9) ){
         myElement2.classList.remove("hide-content");
       
       //yElement.style.background = 'red';
@@ -36,6 +35,18 @@ function inViewport( element ){
       //myElement.style.background = '';
       
     }
+
+    
+    if( inViewport( portfolioContainer ,0.7) ){
+      portfolioContainer.classList.remove("hDisable");
+    
+    //yElement.style.background = 'red';
+    
+  } else {
+     // myElement2.classList.add("hide-content");
+    //myElement.style.background = '';
+    
+  }
     
   })
 })()
