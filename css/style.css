@@ -408,7 +408,7 @@ body::after {
     justify-content: left;
     bottom: 0;
     transition: 0.5s;
-    font-size: 0.6em;
+    font-size: 0.8em;
     font-weight: bold;
   }
 
