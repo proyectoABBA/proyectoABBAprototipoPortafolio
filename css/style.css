@@ -357,14 +357,14 @@ body::after {
 
 .footer-logo {
   margin: 1em 20em 1em 10em;
-  border: 6px solid black;
+  border: 6px solid white;
   background-color: transparent;
   padding: 0.5em;
   position: static;
   height: 30px;
   text-decoration: none;
   transition: 0.3s;
-  color: black;
+  color: white;
   background-color: transparent;
   font-weight: bold;
 }
@@ -441,6 +441,12 @@ body::after {
     padding-top: 1em;
   }
 
+  .header-logo {
+
+    padding:1em 0.5em 0.5em 0.5em;
+   
+  }
+
   .header-logo-container {
     width: 100%;
     display: flex;
@@ -469,14 +475,18 @@ body::after {
     text-align: center;
     transition: 0s;
     border-radius: 0.5em;
+    background-color: transparent;
+    color: white;
   }
   .hero-right-title {
     margin: 0;
     padding: 0;
-    font-size: 3em;
+    font-size: 5em;
+    margin-bottom: 1em;
+  
   }
   .hero-right-text h2 {
-    font-size: 2em;
+    font-size: 3em;
   }
   /*portfolios*/
 
