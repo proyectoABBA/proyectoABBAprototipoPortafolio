@@ -1,16 +1,21 @@
 /*General*/
 
-html, body{
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
   overflow: auto;
-  
+
   padding: 0;
   margin: 0;
 }
 body {
   display: block;
-  
+
   background-color: #000;
-  font-family: 'Spinnaker', sans-serif;
+  font-family: "Spinnaker", sans-serif;
 }
 
 body::after {
@@ -24,262 +29,541 @@ body::after {
   bottom: 0;
   right: 0;
   position: fixed;
-  z-index: -1;   
+  z-index: -1;
 }
-
-
 
 /*General*/
 
 /*Header*/
-  .header {
-    background-color: white;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
 
-  .header-logo{
-    border:10px solid black;
-    background-color: transparent;
-    padding: 0.5em;
-    position: static;
-    height: 50px;
-    text-decoration: none;
-    transition: 0.3s;
-}
-.header-logo:hover{
-    font-size: 1.1em;
+.burger-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.8);
+  line-height: 40px;
+  text-align: center;
+  position: fixed;
+  z-index: 4;
+  left: 5px;
+  top: 5px;
+  color: white;
+  display: none;
 }
 
-.header-logo-in{
-    font-family: 'Patua One', cursive;
-    font-size: 2em;
-    color: black;
-    text-align: center;
+.header {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
-.header-nav-container{
-    width: 50%;
-    height: 90px;
+
+.header-logo {
+  border: 10px solid black;
+  background-color: transparent;
+  padding:1.5em 1em 1em 1em;
+  position: static;
+  height: 50px;
+  text-decoration: none;
+  transition: 0.3s;
 }
-.header-nav{
+.header-logo:hover {
+  font-size: 1.1em;
+}
+
+.header-logo-in {
+  font-family: "Patua One", cursive;
+  font-size: 2em;
+  color: black;
+  text-align: center;
+}
+.header-nav-container {
+  width: 50%;
+  height: 90px;
+}
+.header-nav {
   flex-grow: 2;
   height: inherit;
   padding: 0;
- margin:0;
-
+  margin: 0;
 }
-.header-nav ol{
- display: flex;
- flex-direction: row; 
- justify-content: space-between;
- height: inherit;
- padding: 0;
- margin:0;
+.header-nav ol {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: inherit;
+  padding: 0;
+  margin: 0;
 }
 
-.header-nav ol li{
+.header-nav ol li {
   list-style-type: none;
   height: inherit;
-  padding:0;
- margin:0;
- display: flex;
- flex-direction: column;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
 }
 
-  /*Header*/
+/*Header*/
 
-  .container {
-    /* border: 1px solid red; */
-    /*max-width: 1000px;*/
-    padding: 0 1em;
-   /* max-width: 1200px;*/
-    flex: 1;
-    margin: 0 auto;
-    display: inherit;
-    justify-content: inherit;
-    align-items: inherit;
-    height: inherit;
-    flex-wrap: inherit;
-    flex-direction: inherit;
+.container {
+  /* border: 1px solid red; */
+  /*max-width: 1000px;*/
+  padding: 0 1em;
+  /* max-width: 1200px;*/
+  flex: 1;
+  margin: 0 auto;
+  display: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+  height: inherit;
+  flex-wrap: inherit;
+  flex-direction: inherit;
+}
 
-  }
-  
-  .link-container{
-      display: flex;
-      flex-direction: column;
-      height: inherit;
-      justify-content: center;
-      align-items: center;
-  }
+.link-container {
+  display: flex;
+  flex-direction: column;
+  height: inherit;
+  justify-content: center;
+  align-items: center;
+}
 
-.link-container a{
-    color:#212A35;
-    font-size: 1.2em;
-    height: inherit;
-    display: flex;
+.link-container a {
+  color: #212a35;
+  font-size: 1.2em;
+  height: inherit;
+  display: flex;
   text-decoration: none;
   padding: 0;
   justify-content: center;
   align-items: center;
-  font-family: 'Squada One', cursive;
+  font-family: "Squada One", cursive;
   transition: 0.4s;
+}
+.link-container a:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+/*Social*/
+.social {
+  display: flex;
+  margin-top: 7em;
+}
+
+.social-link {
+  margin-bottom: 1em;
+  transition: 0.4s;
+  text-decoration: none;
+}
+.social-link:hover {
+  font-size: 1.7em;
+}
+.social-right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  height: 300px;
+  position: fixed;
+  right: 0;
+  padding-right: 1em;
+}
+.social-icon {
+  font-size: 1.5em;
+  color: white;
+}
+
+/*Hero*/
+
+.hide-content {
+  margin: 0 -1000px 0 0 !important;
+}
+
+.hero {
+  border-top: 5px black solid;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding-right: 5em;
+  margin-top: 25em;
+  background-color: transparent;
+}
+.hero-right-line-container {
+  padding: 1em 2em 2em 2em;
+  width: 30%;
+}
+
+.hero-right {
+  padding-right: 1em;
+  padding-left: 1em;
+  background-color: #f2f2f2;
+
+  width: 45vw;
+  display: flex;
+  flex-direction: column;
+  transition: 2s;
+}
+.hero-right-title {
+  margin-top: 0.7em;
+  font-size: 4em;
+}
+.hero-right-text h2 {
+  margin-top: 0;
+  font-size: 1.5em;
+  font-weight: 100;
+}
+.hero-right-header {
+  align-items: center;
+  padding: 0em 1em 0em 1em;
+}
+
+.hero-right-body {
+  display: flex;
+  flex-direction: row;
+}
+.hero-right-line {
+  width: 8em;
+  border-top: 5px black solid;
+}
+/*Hero*/
+
+/*Porfolios*/
+.portfolios {
+  display: block;
+  border-top: 5px black solid;
+  margin-top: 6em;
+}
+
+.port-title-container h1 {
+  font-size: 3.5em;
+  color: white;
+  background-color: inherit;
+  margin-left: 300px;
+  margin-right: 300px;
+  margin-top: 0;
+  padding-top: 0.3em;
+}
+.port-title-container {
+  height: 300px;
+  margin-top: 5em;
+  background-color: #1a2b6d;
+}
+
+.portfolio-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: -10em;
+  margin-left: 300px;
+  margin-right: 300px;
+}
+.portfolio {
+  background-color: #f2f2f2;
+  display: block;
+  width: 25%;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-bottom: 2em;
+  padding-bottom: 2em;
+}
+.portfolio a {
+  padding-top: 5em;
+  text-decoration: none;
+  color: #1a2b6d;
+
+  transition: 0.5s;
+}
+
+.portfolio a:hover {
+  color: black;
+  font-size: 1.2em;
+}
+.portfolio a i {
+  font-size: 1em;
+  font-weight: 100;
+}
+
+.portfolio a i span {
+  margin-left: 0.5em;
+  font-family: "Spinnaker", sans-serif;
+}
+
+.portfolio h1 {
+  color: #1a2b6d;
+  font-size: 1.5em;
+  background-color: inherit;
+  transition: 1s;
+}
+.portfolio h2 {
+  color: black;
+  font-size: 1em;
+  font-weight: unset;
+  transition: 1s;
+  margin-bottom: 2em;
+}
+.portfolios .container {
+  padding: 0;
+}
+.hDisable .portfolio h1,
+.hDisable .portfolio h2 {
+  color: #f2f2f2;
+}
+/*Portfolios*/
+
+/*Footer*/
+
+.footer {
+  background-color: #1a2b6d;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.footer-ini{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.footer-nav-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 100%;
+}
+
+.footer-nav ol {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-nav ol li {
+  list-style-type: none;
+  height: inherit;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-logo {
+  margin: 1em 20em 1em 10em;
+  border: 6px solid black;
+  background-color: transparent;
+  padding: 0.5em;
+  position: static;
+  height: 30px;
+  text-decoration: none;
+  transition: 0.3s;
+  color: black;
+  background-color: transparent;
+  font-weight: bold;
+}
+
+.footer-whatsapp-container a {
+  text-decoration: none;
+  transition: 0.5s;
+}
+.footer-whatsapp-container a i {
+  text-decoration: none;
+  color: #82e6a8;
+}
+.footer-whatsapp-container a:hover {
+  font-size: 1.1em;
+}
+.footer-whatsapp-container a span {
+  margin-left: 1em;
+  color: white;
+  font-family: "Spinnaker", sans-serif;
+}
+.footer-mob{
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+}
+@media screen and (max-width: 767px) {
+  .burger-button {
+    display: block;
   }
-  .link-container a:hover{
-      background-color: rgba(0, 0, 0, 0.5);
-      color: white;
+  #menu {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 3;
+    top: 0;
+    left: -100vw;
+    width: 80vw;
+    /*height: 100vh;*/
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    bottom: 0;
+    transition: 0.5s;
+    font-size: 0.6em;
+    font-weight: bold;
   }
 
-  /*Social*/
-  .social{
-      display: flex;
-      margin-top: 7em;
+  #menu.is-active {
+    left: 0;
   }
-  
-      
+  .header-nav-container {
+    height: 70%;
+  }
 
-.social-link{
+  .header-nav {
+    padding: 4em 0em 0em 2em;
+  }
+  .header-nav ol {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .link-container a {
+    color: white;
+    font-size: 1.5em;
     margin-bottom: 1em;
-    transition: 0.4s;
-    text-decoration: none;
-}
-.social-link:hover{
-    font-size: 1.7em;
-}
-  .social-right{
-      
-      width: 50%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-end;
-      height: 300px;
-      position: fixed;
-      right: 0;
-      padding-right: 1em;
   }
-  .social-icon{
-      font-size: 1.5em;
-      color:white;
-      }
+  .header {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1em;
+    padding-top: 1em;
+  }
 
-      /*Hero*/
+  .header-logo-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .header-logo:hover {
+    font-size: initial;
+  }
 
-      .hide-content{
-        margin: 0 -1000px 0 0 !important;
-      }
+  /*Hero*/
+  .hero {
+    margin: 0 0 0 0;
+    padding: 2em 0 0 0;
+    border: 0;
+  }
+  .hero-right-line-container {
+    display: none;
+  }
+  .hero-right {
+    margin: 0 0 2em 0;
+    padding: 2em 1em 0 1em;
+    display: block;
+    width: 100%;
+    font-size: 0.5em;
+    text-align: center;
+    transition: 0s;
+    border-radius: 0.5em;
+  }
+  .hero-right-title {
+    margin: 0;
+    padding: 0;
+    font-size: 3em;
+  }
+  .hero-right-text h2 {
+    font-size: 2em;
+  }
+  /*portfolios*/
 
-      .hero{
-        border-top: 5px black solid;
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-        padding-right: 5em;
-        margin-top: 25em;
-        background-color: transparent;
-      }
-      .hero-right-line-container{
-        padding: 1em 2em 2em 2em;
-        width: 30%;
-      }
+  .portfolios {
+    margin: 0 0 0 0;
+    padding: 2em 0 0 0;
+    border: 0;
+  }
+  .port-title-container {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    display: block;
+    height: 100%;
+    background-color: transparent;
+  }
+  .port-title-container h1 {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    text-align: center;
+  }
+  .portfolio-container {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .portfolio {
+    margin: 1em 1em 1em 1em;
+    padding: 1em 1em 1em 1em;
+    display: block;
+    width: 80%;
+    border-radius: 0.5em;
+  }
+  .portfolio h1 {
+    margin: 1em 0 1em 0;
+  }
+  /*Social*/
+  .social {
+    display: none;
+  }
+  /*footer*/
+  .footer{
+    padding: 0.5em 0 0.5em 0;
+  }
+  .footer-ini{
+    display: none;
+  }
+  .footer-mob{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 
-      .hero-right{
+  }
+  .footer-mob-social{
+display: flex;
+justify-content: space-between;
+align-items: center;
+  }
+  .footer-mob-whats{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .footer-mob-social a{
+    margin-right: 1em;
+    text-decoration: none;
+  }
+  .footer-mob-whats a{
+    text-decoration: none;
+  }
 
-        padding-right: 1em;
-        padding-left: 1em;
-        background-color: #F2F2F2;
+  .footer-mob-whats a i {
+    text-decoration: none;
+    color: #82e6a8;
+  }
 
-      width: 45vw;
-      display: flex;
-      flex-direction: column;
-      transition: 2s;
-      
-      }
-      .hero-right-title{
-        margin-top: 0.7em;
-      }
-      .hero-right-text h2{
-        margin-top: 0;
-        font-size: 1.5em;
-        font-weight: 100;
-      }
-      .hero-right-header{
-        align-items: center;
-        padding: 0em 1em 0em 1em;
-      }
-      .hero-right-header h1{
-        font-size: 4em;
-        
-      }
+  .footer-mob-whats a span {
+    margin-left: 0.3em;
+    color: white;
+    font-family: "Spinnaker", sans-serif;
+  }
+}
 
-      .hero-right-body{
-        display: flex;
-      flex-direction: row;
-      }
-      .hero-right-line{
-        width: 8em;
-        border-top: 5px black solid;
-      }
-      /*Hero*/
+@media screen and (max-width: 480px) {
+}
 
-      /*Porfolios*/
-      .portfolios{
-        display: block;
-        border-top:5px black solid;
-        margin-top: 6em;
-      }
-
-      .port-title-container h1{
-        font-size: 3.5em;
-        color: white;
-        background-color: inherit;
-        margin-left: 300px;
-        margin-right: 300px;
-        margin-top:0;
-        padding-top: 0.3em;
-      }
-      .port-title-container{
-        height: 300px;
-        margin-top: 5em;
-        background-color: #1A2B6D;
-        
-      }
-      
-
-      .portfolio-container{
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        margin-top:-10em;
-         margin-left: 300px;
-        margin-right: 300px;
-      }
-      .portfolio{
-        background-color: #F2F2F2;
-        display: block;
-        width: 25%;
-        padding-left: 1em;
-        padding-right: 1em;
-        margin-bottom: 2em;
-      }
-      
-      .portfolio h1{
-        color: #1A2B6D ;
-        font-size: 1.5em;
-        background-color: inherit;
-        transition: 1s;
-      }
-      .portfolio h2{
-        color: black;
-        font-size: 1em;
-        font-weight: unset;
-        transition: 1s;
-      }
-      .portfolios .container{
-        padding: 0;
-      }
-      .hDisable .portfolio h1, .hDisable .portfolio h2{
-        color: #F2F2F2;
-      }
-      /*Portfolios*/
+@media screen and (max-width: 320px) {
+}
