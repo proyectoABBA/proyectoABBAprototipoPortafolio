@@ -539,7 +539,6 @@ body::after {
   /*footer*/
   .footer{
     padding: 0.5em 0 0.5em 0;
-    position: fixed;
   }
   .footer-ini{
     display: none;
